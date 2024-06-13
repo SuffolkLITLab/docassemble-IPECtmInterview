@@ -1,7 +1,12 @@
 metadata:
   title: IPEC Trademark Client Intake
   short title: Trademark Intake
+  description: |
+    This interview will collect the information your student attorney needs to begin working on your 
+    trademark application. Your student attorney will still need to meet speak with you, and will 
+    reach out to schedule a follow up.
   author: Dylan Barrett
+  unlisted: True
 comment: |
   Suffolk University Law School Intellectual Property and Entrepreneurship  Clinic
 ---
