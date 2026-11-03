@@ -60,6 +60,7 @@ code: |
 ---
 comment: |
   This is the introduction screen.
+id: "suffolk university law school"
 question: |
   Suffolk University Law School
 subquestion: |
@@ -78,6 +79,7 @@ subquestion: |
 continue button field: introduction
 ---
 #No. 1 - client name and email
+id: "your name phone number and email address"
 question: |
   Your Name, Phone number, and Email Address
 subquestion: |
@@ -89,6 +91,7 @@ fields:
   - Email: user.email
 ---
 #No. 2 - Client personal address
+id: "your home address"
 question: |
   Your Home Address
 subquestion: |
@@ -103,6 +106,7 @@ fields:
   - ZIP Code: user.address.zip
 ---
 #No. 3 - Trademark as part of a business
+id: "business entity"
 question: |
    Business Entity
 subquestion: |
@@ -112,6 +116,7 @@ fields:
     datatype: yesnoradio
 ---
 #No. 4 - Business address
+id: "business information"
 question: |
   Business Information
 subquestion: |
@@ -131,6 +136,7 @@ under: |
   **If you didn't mean to answer "yes" to the last question, click "back" in the upper left!**
 ---
 #No. 5 - Digital image of mark
+id: "trademark image file"
 question: |
   Trademark Image File
 subquestion: |
@@ -140,6 +146,7 @@ fields:
     datatype: yesnoradio
 ---
 #No. 6 - picture upload
+id: "image upload"
 question: |
   Image Upload 
 subquestion: |
@@ -153,6 +160,7 @@ under: |
 #No. 7 mark attributes
 comment: |
   we always want to ask this question
+id: "trademark description"
 question: |
   Trademark Description
 subquestion: |
@@ -162,6 +170,7 @@ fields:
     input type: area
     rows: 10
 ---
+id: "goods and services"
 question: |
   Goods and Services
 subquestion: |
@@ -180,6 +189,7 @@ code: |
                 ['both', 'Both goods and services', None, 'Both goods and services.']
               ]
 ---
+id: "goods offered"
 question: |
   Goods Offered
 subquestion: |
@@ -192,9 +202,12 @@ fields:
 #    trigger at: 2
 # list collect: True
 ---
+id: "are there any other goods that you will offer under this trademark"
 question: |
   Are there any other goods that you will offer under this trademark?
-yesno: goods_under_mark.there_is_another
+fields:
+  - no label: goods_under_mark.there_is_another
+    datatype: yesnoradio
 ---
 variable name: international_classes_goods
 data:
@@ -410,6 +423,7 @@ data:
   - IC34 matches
   - OTHER
 ---
+id: "services offered"
 question: |
   Services Offered
 subquestion: |
@@ -422,9 +436,12 @@ fields:
 #    trigger at: 2
 #list collect: True
 ---
+id: "are there any other services you will offer under this trademark"
 question: |
   Are there any other services you will offer under this trademark?
-yesno: services_under_mark.there_is_another
+fields:
+  - no label: services_under_mark.there_is_another
+    datatype: yesnoradio
 ---
 event: wordlist2
 code: |
@@ -480,6 +497,7 @@ data:
   - IC45 personal and social services
   - OTHER
 ---
+id: "your description of goods or services"
 question: |
   Your Description of Goods or Services
 subquestion: |
@@ -489,6 +507,7 @@ fields:
     input type: area
     rows: 10
 ---
+id: "trademark use case s"
 question: |
   Trademark Use Case(s)
 subquestion: |
@@ -498,6 +517,7 @@ fields:
     input type: area
     rows: 10
 ---
+id: "trademark use"
 question: |
   Trademark Use
 subquestion: |
@@ -507,6 +527,7 @@ fields:
     datatype: yesnoradio
 ---
 comment: only ask this if the client answered yes to use in commerce.
+id: "date of first use"
 question: |
   Date of First Use
 subquestion: |
@@ -517,6 +538,7 @@ fields:
   - Date of first use: date_of_first_use
     datatype: date
 ---
+id: "please describe how you have used the proposed trademark"
 question:
   Please describe how you have used the proposed trademark.
 fields:
@@ -526,6 +548,7 @@ fields:
 ---
 comment: |
   only ask this if the client hasn't yet used the proposed trademark in commerce.
+id: "planned use"
 question: |
   Planned Use
 fields:
@@ -536,6 +559,7 @@ subquestion: |
   
   The date does not need to be exact. For instance, if you plan on using the trademark sometime in November of 2021, you may select 11/01/2021. If you're not sure, pick the date that best reflects when you hope to use your Trademark for the first time.
 ---
+id: "location of use or planned use"
 question: |
   Location of Use or Planned Use
 subquestion: |
@@ -549,6 +573,7 @@ fields:
       - Outside the United States (internationally): international
       - Within **_and_** outside the United States: international_and_us
 ---
+id: "state of past or planned use"
 question: |
   State of Past or Planned use.
 subquestion: |
@@ -629,6 +654,7 @@ data:
   - Wyoming
 ---
 event: end_screen
+id: "your document is ready please send this document to your student attorney"
 question: |
   Your document is ready. Please send this document to your student attorney.
 attachment:
